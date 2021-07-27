@@ -64,6 +64,42 @@ const TodoListContextProvider = ({ children }: Props) => {
     useEffect(() => {
         initData();
     }, []);
+    /*
+
+    // if second param is not set, functions same as comPonentDidMount, componentDidUpdate simultaneously
+    useEffect(() => {
+        ...
+    });
+    */
+    
+    /*
+    // first param can return a function which does same as componentWillUnmount (Called after the component is gone from the screen)
+    // Used when diconnecting library of turning off timer, etc
+    useEffect(() => {
+       ...
+       return () => {
+           ...
+       };
+    });
+    */
+    
+    /*
+    // useEffect also functions for its own purpose!
+    // if some variable is set on array (second param), function is called only whe the variable is changed (unlike componentDidUpdate)
+    useEffect(() => {
+        ...
+    }, [todoList]);
+    */
+
+    /*
+    // Unlike cycle functions from Class Component, useEffect can be defined several times in one component
+    useEffect(() => {
+        ...
+    }, [todoList]);
+    useEffect(() => {
+        ...
+    });
+    */
 
     return (
         <TodoListContext.Provider
