@@ -59,6 +59,8 @@ const TodoListContextProvider = ({ children }: Props) => {
     };
 
     // Functioning similarly to componentDidMount function (life-cycle func of Class Component)
+    // first param defines function of 'useEffect' function
+    // second param uses array, (empty array does same as componentDidMount function of Class Component)
     useEffect(() => {
         initData();
     }, []);
