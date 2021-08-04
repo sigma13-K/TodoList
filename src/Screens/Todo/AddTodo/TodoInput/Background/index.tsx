@@ -1,0 +1,32 @@
+import React from 'react';
+import Styled from 'styled-components/native';
+
+const Container = Styled.TouchableWithoutFeedback`
+    posotion: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+`;
+
+const BlackBackground = Styled.View`
+    background-color: #000;
+    opacity: 0.3;
+    width: 100%;
+    height: 100%;
+`;
+
+interface Props {
+    onPress: () => void;
+}
+
+// Simply displays black background View Component
+// using Props onPress function (delivered from parent component), hides TodoInput Componet if the view component is selected
+const Background = ({ onPress }: Props) => {
+    return (
+        <Container onPress={onPress}>
+            <BlackBackground />
+        </Container>
+    );
+};
+export default Background;
