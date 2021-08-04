@@ -2,7 +2,7 @@ import React from 'react';
 import Styled from 'styled-components/native';
 
 const Container = Styled.TouchableWithoutFeedback`
-    posotion: absolute;
+    position: absolute;
     top: 0;
     bottom: 0;
     left: 0;
